@@ -30,40 +30,40 @@ class ThreadLookup(threading.Thread):
                     for j in i.items:
                         target =  j.to_text()
                         if 'cloudfront' in target:
-                            print("CloudFront Frontable domain found: " + str(hostname) + " " + str(target))
+                            print("CloudFront," + str(hostname) + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))  
                         elif 'appspot.com' in target:
-                            print("Google Frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Google appspot.com," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                               
                         elif 'msecnd.net' in target:
-                            print("Azure Frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Azure msecnd.net," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                                
                         elif 'aspnetcdn.com' in target:
-                            print("Azure Frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Azure aspnetcdn.com," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                                
                         elif 'azureedge.net' in target:
-                            print("Azure Frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Azure azureedge.net," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                                
                         elif 'azurefd.net' in target:
-                            print("Azure Frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Azure azurefd.net," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                               
                         elif 'a248.e.akamai.net' in target:
-                            print("Akamai frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Akamai a248.e.akamai.net," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                                
                         elif 'secure.footprint.net' in target:
-                            print("Level 3 URL frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Level 3 secure.footprint.net," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                                
                         elif 'cloudflare' in target:
-                            print("Cloudflare frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Cloudflare," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                                
                         elif 'unbouncepages.com' in target:
-                            print("Unbounce frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Unbounce unbouncepages.com," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                                
                         elif 'x.incapdns.net' in target:
-                            print("Incapsula frontable domain found: " +str(hostname) + " " + str(target))
+                            print("Incapsula x.incapdns.net," +str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                                
                         elif 'fastly' in target:
-                            print("Fastly URL frontable domain found: " + str(hostname) + " " + str(target))
+                            print("Fastly," + str(hostname) + ", " + str(target)+ ", " )
                             potentially_frontable.append(str(hostname))                                
             except Exception as e:
                 pass
