@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 && $venv == "false" ]]; then
 	echo "This script must be either run as root or within a virtual environment." 1>&2
 	exit 1
 fi
-
+apt install python3-pip
 pip3 uninstall -y dnspython
 pip3 install -r requirements.txt
 git clone https://github.com/aboul3la/Sublist3r.git
